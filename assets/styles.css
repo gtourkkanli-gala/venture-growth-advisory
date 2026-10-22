@@ -27,7 +27,7 @@ img{max-width:100%;height:auto;display:block}
 .brand-name{font-family:var(--serif);font-weight:500;font-size:21px;line-height:1;letter-spacing:-.01em;display:flex;flex-direction:column;gap:3px}
 .brand-name i{font-style:italic;color:var(--pen)}
 .brand-name em{display:block;font-family:var(--sans);font-style:normal;font-weight:600;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.primary-nav{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600}
+.primary-nav{display:flex;gap:16px;align-items:center;font-size:14px;font-weight:600}
 .primary-nav a{color:var(--ink);padding:8px 0}
 .primary-nav a:hover{color:var(--pen)}
 .nav-cta{background:var(--ink);color:var(--paper)!important;padding:11px 18px;border-radius:var(--radius-sm)}
@@ -161,10 +161,11 @@ h3{font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.25;lette
 .testimonial-card{margin:0;border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:var(--card);display:flex;flex-direction:column}
 .testimonial-card.testimonial-featured{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .testimonial-card blockquote{font-family:var(--serif);font-size:20px;line-height:1.45;margin:0 0 30px}
-.testimonial-featured blockquote{font-size:23px;line-height:1.42}
+.testimonial-featured blockquote{font-size:20px;line-height:1.45}
 .testimonial-card figcaption,.recommendation-row figcaption{display:flex;gap:12px;align-items:center;margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
 .testimonial-featured figcaption{border-top-color:var(--ink-line)}
-.testimonial-avatar{display:none}
+.testimonial-avatar{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:var(--paper-2);color:var(--ink);font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.02em}
+.testimonial-featured .testimonial-avatar{background:var(--ink-2);color:var(--paper)}
 .testimonial-card figcaption>span:last-child,.recommendation-row figcaption>span:last-child{display:flex;flex-direction:column;gap:2px}
 .testimonial-card figcaption strong,.recommendation-row figcaption strong{font-size:15px;font-weight:600}
 .testimonial-card figcaption small,.recommendation-row figcaption small{font-size:14px;color:var(--muted)}
@@ -175,7 +176,7 @@ h3{font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.25;lette
 .recommendation-row{margin:0;display:grid;grid-template-columns:1.45fr .55fr;gap:56px;padding:34px 0;border-bottom:1px solid var(--line);align-items:end}
 .recommendation-row blockquote{font-family:var(--serif);font-size:22px;line-height:1.45;margin:0;max-width:860px}
 .recommendation-row figcaption{margin:0;padding-top:0;border-top:0}
-.recommendation-row:nth-child(n+4) blockquote{font-size:19px}
+.recommendation-row:nth-child(n+4) blockquote{font-size:22px}
 .testimonial-note{font-size:14px;color:var(--muted);margin-top:18px}
 
 /* Fit */
@@ -292,7 +293,7 @@ h3{font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.25;lette
   .journey{grid-template-columns:repeat(3,minmax(0,1fr))}
   .offers-grid{grid-template-columns:1fr}
 }
-@media(max-width:900px){
+@media(max-width:1100px){
   .primary-nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:16px 20px 24px;flex-direction:column;align-items:flex-start;gap:4px;border-bottom:1px solid var(--line)}
   .primary-nav.open{display:flex}
   .primary-nav a{padding:10px 0;font-size:17px;width:100%}
@@ -339,3 +340,15 @@ h3{font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.25;lette
   .contact-card{min-height:0}
   .evidence-strip .names{font-size:18px}
 }
+
+/* V4: early evidence and clearer offers */
+.credibility-band{padding:25px 0;background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.credibility-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.credibility-item strong{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.7vw,35px);line-height:1.15;color:var(--ink)}
+.credibility-item span{display:block;margin-top:6px;font-size:14px;color:var(--body)}
+.testimonial-card figcaption a{display:inline-block;font-size:12px;color:var(--pen);text-decoration:underline;text-underline-offset:3px;margin-top:5px}
+.testimonial-featured figcaption a{color:var(--pen-ink)}
+.offer-details{padding-left:19px;margin:0 0 14px;font-size:14px;color:var(--body);line-height:1.5}
+.offer-details li{margin-bottom:8px}
+.offer-details b{color:var(--ink)}
+@media(max-width:620px){.credibility-grid{grid-template-columns:1fr;gap:16px}.credibility-item strong{font-size:27px}}
